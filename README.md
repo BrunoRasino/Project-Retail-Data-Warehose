@@ -50,7 +50,7 @@ The database must allow the company to:
 ## Data architecture
 
 The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
-![Data Architecture](docs/data_architecture.png)
+![Data Architecture](Docs/data_architecture.png)
 1. **Bronze Layer**: Stores raw data from the csv source.
 2. **Silver Layer**: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
 3. **Gold Layer**: Business-ready data modeled into a star schema required for reporting and analytics.
