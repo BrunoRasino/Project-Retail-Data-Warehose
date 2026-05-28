@@ -1,0 +1,38 @@
+/* 
+	CREATE DATABASE AND SCHEMAS
+
+	This script creates a new database named retail_data_warehouse after checks if it already exists.
+	If the database already exists, it will be dropped and recreated. The script also creates three schemas:
+	- bronze: For raw data storage.
+	- silver: For cleaned and transformed data.
+	- gold: business-ready data.
+*/
+
+
+use master;
+go
+
+-- Check if the database already exists
+if db_id('retail_data_warehouse') is not null
+begin
+    alter database retail_data_warehouse
+    set single_user with rollback immediate;
+
+    drop database retail_data_warehouse;
+end
+
+go
+
+create database retail_data_warehouse;
+go
+
+use retail_data_warehouse;
+
+go
+
+-- Create schemas
+create schema bronze;
+go
+create schema silver;
+go
+create schema gold;
