@@ -1,0 +1,80 @@
+/*
+	CREATE THE TABLES IN THE SILVER SCHEMA
+
+	This script creates the tables in the silver schema after checking if they already exists.
+	If the tables already exist, they will be dropped and recreated.
+
+	This will cause the lost of all the previous data in the table, so be careful when running this script.
+*/
+
+use retail_data_warehouse;
+
+go
+
+if object_id('silver.sales', 'U') is not null
+	drop table silver.sales;
+
+go
+
+create table silver.sales(
+	sls_sales_id int,
+	sls_order_id int,
+	sls_customer_id int,
+	sls_product_id int,
+	sls_order_date_id int,
+	sls_quantity_sold int
+);
+
+go
+
+if object_id('silver.products', 'U') is not null
+	drop table silver.products;
+
+go
+
+create table silver.products(
+	pdc_product_id int,
+	pdc_product_name varchar(255),
+	category varchar(255),
+	subcategory varchar(255),
+	brand varchar(255),
+	unit_cost decimal(10,2),
+	unit_price decimal(10,2),
+	launch_date date
+);
+
+go
+
+if object_id('silver.customers', 'U') is not null
+	drop table silver.customers;
+
+go
+
+create table silver.customers(
+	cst_customer_id int,
+	cst_customer_name varchar(255),
+	cst_gender varchar(10),
+	cst_birth_date date,
+	cst_city varchar(255),
+	cst_state varchar(255),
+	cst_registration_date date
+);
+
+go
+
+if object_id('silver.dates', 'U') is not null
+	drop table silver.dates;
+
+go
+
+create table silver.dates(
+	dat_date_id int,
+	dat_full_date date,
+	dat_day_number int,
+	dat_day_name varchar(20),
+	dat_month_number int,
+	dat_month_name varchar(20),
+	dat_quarter int,
+	dat_year int,
+	dat_weekend_flag bit
+);
