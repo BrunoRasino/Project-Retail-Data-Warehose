@@ -46,7 +46,7 @@ Schemas must represent the Medallion Architecture layers:
 
 ## **Column Naming Conventions**
 
-### **Systen table columns**
+### **Table columns**
 - All columns that came from the csv files must start with the prefix referring to the file where they are from.
 - Example: sales 'sls', customers 'cst', dates 'dat', products 'pdc'. 
 
