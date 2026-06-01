@@ -10,6 +10,7 @@
 
 
 use master;
+
 go
 
 -- Check if the database already exists
@@ -31,8 +32,13 @@ use retail_data_warehouse;
 go
 
 -- Create schemas
+	
 create schema bronze;
+
 go
+	
 create schema silver;
+
 go
+	
 create schema gold;
