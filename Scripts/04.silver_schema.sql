@@ -22,7 +22,8 @@ create table silver.sales(
 	sls_customer_id int,
 	sls_product_id int,
 	sls_order_date_id int,
-	sls_quantity_sold int
+	sls_quantity_sold int,
+	dwh_load_date datetime
 );
 
 go
@@ -35,12 +36,13 @@ go
 create table silver.products(
 	pdc_product_id int,
 	pdc_product_name varchar(255),
-	category varchar(255),
-	subcategory varchar(255),
-	brand varchar(255),
-	unit_cost decimal(10,2),
-	unit_price decimal(10,2),
-	launch_date date
+	pdc_category varchar(255),
+	pdc_subcategory varchar(255),
+	pdc_brand varchar(255),
+	pdc_unit_cost decimal(10,2),
+	pdc_unit_price decimal(10,2),
+	pdc_launch_date date,
+	dwh_load_date datetime
 );
 
 go
@@ -57,7 +59,8 @@ create table silver.customers(
 	cst_birth_date date,
 	cst_city varchar(255),
 	cst_state varchar(255),
-	cst_registration_date date
+	cst_registration_date date,
+	dwh_load_date datetime
 );
 
 go
@@ -76,5 +79,6 @@ create table silver.dates(
 	dat_month_name varchar(20),
 	dat_quarter int,
 	dat_year int,
-	dat_weekend_flag bit
+	dat_weekend_flag bit,
+	dwh_load_date datetime
 );
