@@ -12,9 +12,9 @@ The business requirements were generated with the support of **ChatGPT** to emul
 
 The project includes:
 
-1. Building a Data Warehouse using Medallion Architecture (Bronze, Silver, and Gold layers)
-2. Developing ETL pipelines to extract, transform, and load data from CSV source files into the warehouse
-3. Creating analytical reports and dashboards to generate business insights and support decision-making
+- Building a Data Warehouse using Medallion Architecture (Bronze, Silver, and Gold layers)
+- Developing ETL pipelines to extract, transform, and load data from CSV source files into the warehouse
+- Creating analytical reports and dashboards to generate business insights and support decision-making
 
 ---
 
@@ -35,22 +35,10 @@ The goal of this project is to design a centralized analytical database optimize
 
 ---
 
-# Business Requirements
-
-The database must allow the company to:
-
-1. Analyze sales performance over time
-2. Understand customer behavior
-3. Track product performance
-4. Monitor revenue trends
-5. Support strategic decision-making using reliable data
-
----
-
 ## Data architecture
 
 The data architecture for this project follows the Medallion Architecture approach, organized into Bronze, Silver, and Gold layers.
 ![Data Architecture](Docs/data_architecture.png)
-1. **Bronze Layer**: Stores raw data from the csv source.
-2. **Silver Layer**: This layer applies data cleaning, normalization, and transformation processes to prepare the data for analytical usage.
-3. **Gold Layer**: Contains business-ready data modeled into a Star Schema optimized for reporting, dashboarding, and analytics.
+- **Bronze Layer**: Stores raw data from the csv source.
+- **Silver Layer**: This layer applies data cleaning, normalization, and transformation processes to prepare the data for analytical usage.
+- **Gold Layer**: Contains business-ready data modeled into a Star Schema optimized for reporting, dashboarding, and analytics.
