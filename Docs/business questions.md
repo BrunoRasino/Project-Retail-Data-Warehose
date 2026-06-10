@@ -5,13 +5,13 @@
 ## **1. sales**
 
 **1.1** What is the total revenue this month?
-Revenue
+Revenue.
 **1.2** Which months had the highest sales?
-Revenue by Month
+Revenue by Month.
 **1.3** What is the average order value?
-Revenue / Number of Orders (AOV)
+Revenue / Number of Orders (AOV).
 **1.4** Are sales growing over time?
-Revenue Growth %
+Revenue Growth %.
 
 ## **2. Product questions**
 
